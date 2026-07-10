@@ -1,11 +1,16 @@
 {
-  "name": "dtc-starter-monorepo",
+  "name": "cupil-stuff-store",
   "private": false,
   "packageManager": "pnpm@10.11.1",
   "engines": {
     "node": ">=20"
-  },
+  }, 
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
+    "docker:up": "docker compose up -d --build -d",
+    "docker:down": "docker compose down",
     "dev": "pnpm -r dev",
     "build": "pnpm -r build",
     "start": "turbo start",
@@ -29,3 +34,4 @@
     "turbo": "^2.0.14"
   }
 }
+
